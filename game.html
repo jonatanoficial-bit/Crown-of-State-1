@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simulador Político – Jogo</title>
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body class="game">
+  <div class="background"></div>
+
+  <!-- Cabeçalho com HUD e título -->
+  <header class="hud">
+    <h2 class="game-title">Simulador Político</h2>
+    <div class="stats" id="statsContainer">
+      <!-- Indicadores são gerados dinamicamente pelo script -->
+    </div>
+  </header>
+
+  <!-- Navegação principal entre telas -->
+  <nav class="main-nav" id="mainNav">
+    <button class="nav-btn active" data-screen="president">
+      <svg class="icon"><use href="assets/icons.svg#president" /></svg>
+      <span>Gabinete</span>
+    </button>
+    <button class="nav-btn" data-screen="meeting">
+      <svg class="icon"><use href="assets/icons.svg#meeting" /></svg>
+      <span>Ministros</span>
+    </button>
+    <button class="nav-btn" data-screen="finance">
+      <svg class="icon"><use href="assets/icons.svg#finance" /></svg>
+      <span>Finanças</span>
+    </button>
+    <button class="nav-btn" data-screen="military">
+      <svg class="icon"><use href="assets/icons.svg#military" /></svg>
+      <span>Militar</span>
+    </button>
+  </nav>
+
+  <!-- Área onde as telas são renderizadas -->
+  <main id="screenContainer" class="screen-container">
+    <!-- Conteúdo dinâmico -->
+  </main>
+
+  <!-- Modal para exibir decisões e suas consequências -->
+  <div id="decisionModal" class="modal hidden">
+    <div class="modal-content">
+      <h3 id="modalTitle"></h3>
+      <p id="modalDescription"></p>
+      <ul id="modalEffects" class="effects"></ul>
+      <div class="modal-actions">
+        <button id="applyDecision" class="btn primary">Aplicar</button>
+        <button id="closeModal" class="btn secondary">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast para exibir eventos aleatórios -->
+  <div id="eventToast" class="toast hidden"></div>
+
+  <script src="scripts/game.js"></script>
+</body>
+</html>

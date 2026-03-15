@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simulador Político</title>
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body class="homepage">
+  <!-- Plano de fundo com gradiente e textura leve -->
+  <div class="background"></div>
+
+  <main class="landing">
+    <section class="panel landing-panel">
+      <h1>Simulador Político</h1>
+      <p class="tagline">Assuma o governo e trace o destino de uma nação.</p>
+      <div class="actions">
+        <button id="startBtn" class="btn primary">Iniciar Jogo</button>
+        <a href="admin/login.html" class="btn secondary">Admin</a>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // Navega para a página do jogo ao clicar em "Iniciar Jogo"
+    document.getElementById('startBtn').addEventListener('click', function () {
+      window.location.href = 'game.html';
+    });
+  </script>
+</body>
+</html>
