@@ -1,0 +1,9 @@
+{
+  "packages": [
+    {
+      "name": "base",
+      "version": "1.0.0",
+      "file": "base.json"
+    }
+  ]
+}
