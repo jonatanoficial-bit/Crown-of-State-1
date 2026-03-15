@@ -1,0 +1,65 @@
+[
+  {
+    "id": "president_1",
+    "screen": "president",
+    "title": "Reforma Educacional",
+    "description": "Investir fortemente em educação básica e superior para melhorar a qualificação da população.",
+    "effects": { "education": 10, "economy": -5, "popularity": 5, "cash": -200 }
+  },
+  {
+    "id": "president_2",
+    "screen": "president",
+    "title": "Privatizar Empresas Públicas",
+    "description": "Vender empresas estatais para o setor privado como forma de captar recursos rápidos.",
+    "effects": { "economy": 8, "popularity": -6, "corruption": 3, "cash": 300 }
+  },
+  {
+    "id": "meeting_1",
+    "screen": "meeting",
+    "title": "Criar Programa Social",
+    "description": "Lançar um novo programa de assistência social para famílias de baixa renda.",
+    "effects": { "popularity": 8, "economy": -4, "cash": -150 }
+  },
+  {
+    "id": "meeting_2",
+    "screen": "meeting",
+    "title": "Nomear Aliado Político",
+    "description": "Substituir um ministro técnico por um aliado político fiel.",
+    "effects": { "corruption": 7, "relations": -2, "popularity": 2 }
+  },
+  {
+    "id": "finance_1",
+    "screen": "finance",
+    "title": "Reduzir Impostos",
+    "description": "Reduzir a carga tributária para estimular o consumo e agradar a população.",
+    "effects": { "economy": 8, "popularity": 4, "corruption": 2, "cash": -150 }
+  },
+  {
+    "id": "finance_2",
+    "screen": "finance",
+    "title": "Incentivar Exportações",
+    "description": "Conceder incentivos fiscais para empresas que exportam produtos e serviços.",
+    "effects": { "economy": 6, "relations": 4, "cash": 100 }
+  },
+  {
+    "id": "military_1",
+    "screen": "military",
+    "title": "Cortar Orçamento Militar",
+    "description": "Reduzir os gastos com defesa para investir em outras áreas.",
+    "effects": { "economy": 5, "military": -10, "stability": -3, "relations": -2, "popularity": -1 }
+  },
+  {
+    "id": "military_2",
+    "screen": "military",
+    "title": "Modernizar Exército",
+    "description": "Comprar equipamentos e treinar melhor as tropas para modernizar as forças armadas.",
+    "effects": { "military": 10, "economy": -2, "cash": -250 }
+  },
+  {
+    "id": "military_3",
+    "screen": "military",
+    "title": "Assinar Tratado de Paz",
+    "description": "Firmar um acordo de paz com um país vizinho, reduzindo tensões na fronteira.",
+    "effects": { "relations": 8, "military": -4, "stability": 6, "corruption": -2 }
+  }
+]

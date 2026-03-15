@@ -1,0 +1,32 @@
+[
+  {
+    "id": "event_1",
+    "title": "Escândalo de Corrupção",
+    "description": "Um grande esquema de corrupção envolvendo membros do governo veio à tona.",
+    "effects": { "corruption": 5, "popularity": -8, "stability": -4 }
+  },
+  {
+    "id": "event_2",
+    "title": "Crescimento Econômico",
+    "description": "O PIB registrou alta acima do esperado, elevando o otimismo no país.",
+    "effects": { "economy": 7, "popularity": 3, "stability": 2 }
+  },
+  {
+    "id": "event_3",
+    "title": "Greve Geral",
+    "description": "Trabalhadores de diversas categorias organizaram uma greve que paralisou o país.",
+    "effects": { "stability": -6, "economy": -5, "popularity": -2 }
+  },
+  {
+    "id": "event_4",
+    "title": "Visita Diplomática",
+    "description": "Uma visita oficial de um líder estrangeiro melhorou as relações bilaterais.",
+    "effects": { "relations": 5, "stability": 3, "popularity": 1 }
+  },
+  {
+    "id": "event_5",
+    "title": "Descoberta de Petróleo",
+    "description": "Foram encontrados enormes reservatórios de petróleo no território nacional.",
+    "effects": { "economy": 10, "cash": 500, "corruption": 4 }
+  }
+]
