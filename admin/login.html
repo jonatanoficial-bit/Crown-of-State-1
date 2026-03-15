@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin – Login</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="stylesheet" href="../styles/admin.css" />
+</head>
+<body class="admin-login">
+  <div class="background"></div>
+  <main class="landing">
+    <section class="panel landing-panel">
+      <h1>Área Administrativa</h1>
+      <p class="tagline">Faça login para gerenciar conteúdo.</p>
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="username">Usuário</label>
+          <input type="text" id="username" required />
+        </div>
+        <div class="form-group">
+          <label for="password">Senha</label>
+          <input type="password" id="password" required />
+        </div>
+        <button type="submit" class="btn primary">Entrar</button>
+        <p id="loginMessage" class="message"></p>
+      </form>
+    </section>
+  </main>
+  <script>
+    // Login simples: usuário "admin" e senha "admin"
+    const form = document.getElementById('loginForm');
+    const message = document.getElementById('loginMessage');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const user = document.getElementById('username').value.trim();
+      const pass = document.getElementById('password').value.trim();
+      if (user === 'admin' && pass === 'admin') {
+        localStorage.setItem('adminLoggedIn', 'true');
+        window.location.href = 'admin.html';
+      } else {
+        message.textContent = 'Credenciais inválidas.';
+      }
+    });
+  </script>
+</body>
+</html>

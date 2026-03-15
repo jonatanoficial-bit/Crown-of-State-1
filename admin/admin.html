@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Painel Administrativo</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="stylesheet" href="../styles/admin.css" />
+</head>
+<body class="admin">
+  <div class="background"></div>
+  <header class="hud">
+    <h2>Painel Administrativo</h2>
+    <button id="logoutBtn" class="btn secondary" style="margin-left:auto;">Sair</button>
+  </header>
+  <main class="admin-container">
+    <section id="decisionsSection">
+      <h2>Decisões</h2>
+      <table id="decisionsTable">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Tela</th>
+            <th>Título</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Linhas dinâmicas -->
+        </tbody>
+      </table>
+      <h3>Adicionar Nova Decisão</h3>
+      <form id="decisionForm">
+        <div class="form-group">
+          <label for="decScreen">Tela</label>
+          <select id="decScreen" required>
+            <option value="president">Gabinete</option>
+            <option value="meeting">Ministros</option>
+            <option value="finance">Finanças</option>
+            <option value="military">Militar</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="decTitle">Título</label>
+          <input type="text" id="decTitle" required />
+        </div>
+        <div class="form-group">
+          <label for="decDescription">Descrição</label>
+          <textarea id="decDescription" required></textarea>
+        </div>
+        <div class="form-group">
+          <label>Efeitos (valores positivos ou negativos; deixe em branco para zero)</label>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(90px, 1fr)); gap: 0.5rem;">
+            <input type="number" id="effEconomy" placeholder="Economia" step="1" />
+            <input type="number" id="effPopularity" placeholder="Popularidade" step="1" />
+            <input type="number" id="effStability" placeholder="Estabilidade" step="1" />
+            <input type="number" id="effRelations" placeholder="Relações" step="1" />
+            <input type="number" id="effMilitary" placeholder="Militar" step="1" />
+            <input type="number" id="effEducation" placeholder="Educação" step="1" />
+            <input type="number" id="effCorruption" placeholder="Corrupção" step="1" />
+            <input type="number" id="effCash" placeholder="Caixa" step="50" />
+          </div>
+        </div>
+        <button type="submit" class="btn primary">Adicionar Decisão</button>
+      </form>
+    </section>
+    <hr style="margin:2rem 0;border: none; border-top: 1px solid rgba(255,255,255,0.1);" />
+    <section id="eventsSection">
+      <h2>Eventos</h2>
+      <table id="eventsTable">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Título</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Linhas dinâmicas de eventos -->
+        </tbody>
+      </table>
+      <h3>Adicionar Novo Evento</h3>
+      <form id="eventForm">
+        <div class="form-group">
+          <label for="evTitle">Título</label>
+          <input type="text" id="evTitle" required />
+        </div>
+        <div class="form-group">
+          <label for="evDescription">Descrição</label>
+          <textarea id="evDescription" required></textarea>
+        </div>
+        <div class="form-group">
+          <label>Efeitos (valores positivos ou negativos; deixe em branco para zero)</label>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(90px, 1fr)); gap: 0.5rem;">
+            <input type="number" id="evEconomy" placeholder="Economia" step="1" />
+            <input type="number" id="evPopularity" placeholder="Popularidade" step="1" />
+            <input type="number" id="evStability" placeholder="Estabilidade" step="1" />
+            <input type="number" id="evRelations" placeholder="Relações" step="1" />
+            <input type="number" id="evMilitary" placeholder="Militar" step="1" />
+            <input type="number" id="evEducation" placeholder="Educação" step="1" />
+            <input type="number" id="evCorruption" placeholder="Corrupção" step="1" />
+            <input type="number" id="evCash" placeholder="Caixa" step="50" />
+          </div>
+        </div>
+        <button type="submit" class="btn primary">Adicionar Evento</button>
+      </form>
+    </section>
+    <div class="admin-actions">
+      <button id="exportData" class="btn secondary">Exportar Dados</button>
+      <button id="importBtn" class="btn secondary">Importar Dados</button>
+      <input type="file" id="importFile" accept="application/json" style="display:none" />
+    </div>
+    <p class="message">Os dados são salvos apenas localmente. Use exportar/importar para persistir ou compartilhar.</p>
+  </main>
+  <script src="../scripts/admin.js"></script>
+</body>
+</html>
